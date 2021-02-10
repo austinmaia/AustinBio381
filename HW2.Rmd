@@ -1,0 +1,10 @@
+---
+title: "HW2"
+author: "Maia Austin"
+date: "2/10/2021"
+output: html_document
+---
+
+## Hello! I work in the May-Collado lab.
+
+# My research is focused on dolphin acoustic structures.

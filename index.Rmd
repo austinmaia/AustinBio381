@@ -1,0 +1,16 @@
+---
+title: "BIOL 381 Homepage"
+author: "Maia Austin"
+output: 
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
+---
+
+<img src = "Maia.jpeg" width = "300" height = "300" />
+
+Hello! I am a first year PhD student in the Biology department. I'm excited to build up my computational and R skills in this course. (p.s. this photo is in Zhangjiajie National Park in China, which was the inspiration for the scenery of Avatar!)
+
+## Homework Submissions
+
+[Homework 2](HW2.html)
