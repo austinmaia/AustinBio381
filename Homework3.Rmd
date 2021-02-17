@@ -1,0 +1,42 @@
+---
+title: "Homework 3"
+author: "Maia Austin"
+date: "2/17/2021"
+output: html_document
+---
+
+1. Change tab spaces to commas for CSV format.
+```
+FIND:\s{2,}
+REPLACE:,
+```
+2. Reformat list of conflicts of interests.
+```
+FIND:(\w+)\, (\w+)\, (.*)
+REPLACE:\2 \1 (\3)
+```
+3. Reformat track list from single line.
+```
+FIND:  ([0][0][0]\d)
+REPLACE:\n\1
+```
+4. Put track number at end of file name.
+```
+FIND:([0][0][0]\d) (.+)\.[mp3]+
+REPLACE:\2_\1\3.mp3
+```
+5. Rearrange genus information.
+```
+FIND:(\w)\w+,(\w+,)\d+.\d,(\d+)
+REPLACE:\1_\2\3
+```
+6. Rearrange and abbreviate species name.
+```
+FIND:(\w)\w+,(\w{4})\w+,\d+.\d(,\d+)
+REPLACE:\1_\2\3
+```
+7. Combine species and genus and reverse numerical columns.
+```
+FIND:(\w{3})\w+,(\w{3})\w+,(\d+.\d),(\d+)
+REPLACE:\1\2, \4, \3
+```

@@ -14,3 +14,6 @@ Hello! I am a first year PhD student in the Biology department. I'm excited to b
 ## Homework Submissions
 
 [Homework 2](HW2.html)
+
+[Homework 3](Homework3.html)
+
