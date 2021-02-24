@@ -19,4 +19,7 @@ Hello! I am a first year PhD student in the Biology department. I'm excited to b
 
 [Homework 4.1](HW4.html)
 
+[Homework 4.2](Letter.pdf)
+
+[Homework 4.3](slides.pdf)
 

@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Odontocetes}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Oceanic Dolphins}{3}{0}{1}
+\beamer@sectionintoc {2}{Echolocation}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Odontocete Melon}{5}{0}{2}
