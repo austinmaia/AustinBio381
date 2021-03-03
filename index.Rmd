@@ -23,3 +23,5 @@ Hello! I am a first year PhD student in the Biology department. I'm excited to b
 
 [Homework 4.3](slides.pdf)
 
+[Homework 5](HW5.html)
+
