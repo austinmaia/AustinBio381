@@ -1,0 +1,271 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.24)  16 MAR 2021 18:38
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Untitled.tex
+(./Untitled.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+) (/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip49
+\fb@frw=\dimen141
+\fb@frh=\dimen142
+\FrameRule=\dimen143
+\FrameSep=\dimen144
+)
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex
+.def
+File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count187
+\l__pdf_internal_box=\box47
+) (./Untitled.aux)
+\openout1 = `Untitled.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base
+.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/Users/maustin/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 output: html_
+                  document
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 59.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 59.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.65 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.66 my_
+        vec <- 1:n_dims^2
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.70 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (19.2508pt too wide) in paragraph at lines 74--77
+[]\OT1/cmr/m/n/10 firstandlast <- c(m[1,], m[nrow(m),]) sum(firstandlast) mean(
+firstandlast, trim=0) 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 e_
+       m <- eigen(m)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.80 typeof(e_
+              m$vectors)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.88 my_
+        matrix <- matrix(runif(16), nrow=4, ncol=4)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.89 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.90 my_
+        logical <- c(runif(100))
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.92 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.93 my_
+        letters <- sample(letters)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.95 my_
+        list <- list(mat=my_matrix, log=my_logical, let=my_letters)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.96 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.97 list2 <- list(my_
+                      list$mat[2,2], my_list$log[2], my_list$let[2])
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.97 list2 <- list(my_list$mat[2,2], my_
+                                        list$log[2], my_list$let[2])
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.97 ...list(my_list$mat[2,2], my_list$log[2], my_
+                                                  list$let[2])
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[1
+
+{/Users/maustin/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] 
+(./Untitled.aux) ) 
+Here is how much of TeX's memory you used:
+ 1007 strings out of 480971
+ 16114 string characters out of 5906863
+ 301959 words of memory out of 5000000
+ 18264 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 68i,5n,74p,251b,108s stack positions out of 5000i,500n,10000p,200000b,80000s
+</Users/maustin/Library/TinyTeX/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb></Users/maustin/Library/TinyTeX/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb></Users/maustin/Library/TinyTeX/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></Users/maustin/Library/TinyTeX/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb></Users/maustin/Library/TinyTeX/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Untitled.pdf (1 page, 54600 bytes).
+PDF statistics:
+ 28 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
