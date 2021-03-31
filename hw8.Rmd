@@ -1,0 +1,71 @@
+---
+title: "Homework 8"
+author: "Maia Austin"
+date: "3/31/2021"
+output: 
+  html_document:
+    theme: cosmo
+---
+
+# Hypothesis
+#### I hypothesized that Guyana (*Sotalia guianensis*) dolphins in the Gandoca-Manzanillo wildlife refuge would exhibit lower average Fundamental Frequency while whistling in social contexts than while whistling in foraging contexts.
+
+
+### Chosing values for model input
+The values were chosen based upon May-Collado and Wartzok 2009 characterizing the acoustic repertoire of the study population, which found that the mean minimum frequency was 12.31 kHz (12,310 Hz) and that the mean maximum frequency was 21.21 kHz (21,210 Hz). While maximum and minimum frequencies have been used extensively as test variables in dolphin acoustic analysis, fundamental frequencies require close tracing of the contour of the whistle. This has only become available more recently as technologies developed, and is a new avenue of analysis
+
+Because fundamental frequency covers the length of the contour, the mean value would be expected to be a median value between the minimum and maximum frequency values. For the sake of the randomized model, I made estimates at the upper and lower levels of this frequency range to examine the effects of varying differences on the model.
+
+The real values for behavioral states (social and foraging) were based upon parameters from preliminary analysis of Guyana whistle contour tracing done in the Luscinia program.
+
+Sample sizes were kept small (at 50) due to the high quality of whistle necessary for contour tracing.
+
+I chose to do a one-way analysis of variance (ANOVA), as the predictor (behavioral state) was discrete and the response (mean fundamental frequency) was continuous.
+
+# Code
+## Constructing data frame
+```{r}
+library(ggplot2)
+nGroup <- 3
+nName <- c("Control","Social","Foraging")
+
+nMean <- c(16760, 14000, 19000)
+# Trial 1 nMean <- c(16760, 14000, 19000) - sig
+# Trial 2 nMean <- c(16760, 15000, 18000) - sig
+# Trial 3 (actual means) nMean <- c(17000, 16364, 17101) - sometimes sig, sometimes not (depends on data generation)
+# Trial 4 nMean <- c(16760, 16500, 16900) - still sometimes sig, usually not
+# Trial 5 nMean <- c(16760, 16600, 16800) - not sig
+nSD <- c(3000, 3000, 3000)
+nSize <- c(50,50,50)
+#Trial 1 (based on actual sample size) nSize <- c(50,50,50) 
+#Trial 2 nSize <- c(100,100,100) - increased significance occurences for nMean trials 3-5
+#Trial 3 nSize <- c(10,10,10) - decreased significance for all
+#Trial 4 nSize <- c(25,25,25) - had some significance for Trials 4 and 4, but reduced
+#Trial 5 nSize <- c(500,500,500) - increased significance occurences for all
+
+ID <- 1:(sum(nSize))
+resVar <- c(rnorm(n=nSize[1],mean=nMean[1], sd = nSD[1]),
+            rnorm(n=nSize[2],mean=nMean[2], sd = nSD[2]),
+            rnorm(n=nSize[3],mean=nMean[3], sd = nSD[3]))
+TGroup <- rep(nName, nSize)
+ANOdata <- data.frame(ID,TGroup,resVar)
+str(ANOdata)
+```
+
+## Running ANOVA and plotting
+```{r}
+ANOmodel <- aov(resVar~TGroup,data=ANOdata)
+print(ANOmodel)
+
+ANOPlot <- ggplot(data=ANOdata, aes(x=TGroup, y=resVar, fill=TGroup)) + geom_boxplot()
+
+print(ANOPlot)
+summary(ANOmodel)
+```
+
+
+## Analysis
+It seems as though the minimum difference in Fundamental frequency means to achieve significance is around 400 hZ. 
+This value decreased as sample size increased. It seems as though the minimum sample size required is 25, but this shift based upon the difference in means. 
+
+
