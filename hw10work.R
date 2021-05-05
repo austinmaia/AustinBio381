@@ -1,0 +1,202 @@
+
+my_vec <- c(1,0,2,0,3,0,4,0,5,0,6,0)
+
+
+# Question 1
+
+#----------------------------------
+# FUNCTION zeroCount
+# description: Counts the number of zeros in a numeric vector using for loop
+# inputs: numeric vector of any length
+# outputs: single numeric value of counter length
+###################################
+zeroCount <- function(vec=runif(10)) {
+  counter=0
+  for (i in seq_along(vec)) {
+    if(vec[i] == 0){
+      counter = counter + 1
+    }
+  }
+  
+  return(counter)
+} # end of zeroCount
+#----------------------------------
+zeroCount(my_vec)
+
+
+#Question 2
+
+my_vec_sub <- my_vec[my_vec == 0]
+length(my_vec_sub)
+
+#Question 3 
+
+# Write a function that takes as input two integers representing the number of rows and columns in a matrix. 
+# The output is a matrix of these dimensions in which each element is the product of the row number x the column number.
+
+#----------------------------------
+# FUNCTION make_matrix
+# description: make a matrix in which each element is a product of the row number x the column number
+# inputs: two numeric values, the row number and the column number
+# outputs: matrix
+###################################
+matrix_generate <- function(x=5, y=5) {
+  z <- matrix(data=0, nrow=x, ncol=y, byrow=FALSE)
+  
+  for (i in 1:ncol(z)){
+    for (j in 1:ncol(z)){
+      z[i,j] = i * j
+    }
+  }
+  
+  return(z)
+} # end of matrix_generate
+#----------------------------------
+
+matrix_generate(10,10)
+
+
+# Question 4
+# Use the code from the April 8th lecture (Randomization Tests) to design and conduct a randomization test for some of your own data. You will need to modify the functions that read in the data, calculate the metric, and randomize the data. Once those are set up, the program should run correctly calling your new functions. Also, to make your analysis fully repeatable, make sure you set the random number seed at the beginning (use either set.seed() in base R, or char2seed in the TeachingDemos package).
+
+library(ggplot2)
+library(TeachingDemos)
+
+## Functions
+
+#----------------------------------
+# FUNCTION if_null
+# description: description
+# inputs: input_description
+# outputs: output_description
+###################################
+if_null <- function(z=NULL) {
+  x_obs <- 1:20
+  y_obs <- x_obs+10*rnorm(20)
+  df <- data.frame(ID=seq_along(x_obs),
+                   x_obs, 
+                   y_obs)
+  return(df)
+} # end of if_null
+#----------------------------------
+if_null()
+
+
+
+#----------------------------------
+# FUNCTION read_data
+# description: read in (or generate) data set for analysis
+# inputs: file name
+# outputs: 3 column data frame of observed data (ID, x, y)
+###################################
+read_data <- function(z=NULL) {
+  
+  if(is.null(z)){
+    df <- if_null()
+  }
+  else {
+    df<- read.table(file=z,
+                  header=TRUE,
+                  sep=",",
+                  stringsAsFactors = FALSE)
+  }
+  return(df)
+} 
+#----------------------------------
+
+#----------------------------------
+# FUNCTION get_metric
+# description: calculate metric for randomization test
+# inputs: 2-column data frame for regression
+# outputs: regression slope
+###################################
+get_metric <- function(z=NULL) {
+  if(is.null(z)){
+    z <- if_null()
+  }
+  . <- lm(z[,3]~z[,2])
+  . <- summary(.)
+  . <- .$coefficients[2,1]
+  slope <- .
+  return(slope)
+} # end of get_metric
+#----------------------------------
+
+
+#----------------------------------
+# FUNCTION shuffle_data
+# description: randomize data for regression analysis
+# inputs: 3 column data frame (ID, xvar, yvar)
+# outputs: 3 column data frame (ID, xvar, yvar)
+###################################
+shuffle_data <- function(z=NULL) {
+  if(is.null(z)){
+    z <- if_null()
+  }
+  z[,3] <- sample(z[,3])
+  return(z)
+} # end of shuffle_data
+#----------------------------------
+
+
+#----------------------------------
+# FUNCTION get_pval
+# description: calculate p value from simulation
+# inputs: list of observed metric and vector of simulated metrics
+# outputs: lower and upper tail probability value
+###################################
+get_pval <- function(z=NULL) {
+  if(is.null(z)){
+    z <- list(xObs=runif(1),xSim=runif(1000))}
+  p_lower <- mean(z[[2]]<=z[[1]])
+  p_upper <- mean(z[[2]]>=z[[1]])
+  return(c(pL=p_lower,pU=p_upper))
+} # end of get_pval
+#----------------------------------
+
+
+#----------------------------------
+# FUNCTION plot_ran_test
+# description: create a ggplot of histogram of simulated values
+# inputs: list of observed metric and vector simulated metrics
+# outputs: saved ggplot graph
+###################################
+plot_ran_test <- function(z=NULL) {
+  if(is.null(z)){
+    z <- list(rnorm(1),rnorm(1000))}
+  df <- data.frame(ID=seq_along(z[[2]]), sim_x=z[[2]])
+  p1 <- ggplot(data=df, mapping=aes(x=sim_x))
+  p1 + geom_histogram(mapping=aes(fill=I("goldenrod"), color=I("black"))) + geom_vline(aes(xintercept=z[[1]], col="blue"))
+  
+} # end of plot_ran_test
+#----------------------------------
+
+
+n_sim <- 1000 # number of simulated data sets
+x_sim <- rep(NA,n_sim) # set up empty vector for simulated slopes
+df <- read_data("SotaliaGroupskHz.csv") #get data
+x_obs <- get_metric(df)#get slope of observed data
+
+for (i in seq_len(n_sim)){
+  x_sim[i] <- get_metric(shuffle_data(df))
+}
+
+slopes <- list(x_obs,x_sim) 
+get_pval(slopes)
+plot_ran_test(slopes)
+
+# Question 5
+
+# Fake Data Set
+x_obs <- 1:20
+y_obs <- x_obs + 10*rnorm(20)
+z <- data.frame(ID=seq_along(x_obs),
+                x_obs,
+                y_obs)
+
+# Regression analysis 
+reg_model <- lm(y_obs~x_obs, data=z) 
+
+# summary 
+summary(reg_model)
+

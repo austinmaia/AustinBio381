@@ -33,3 +33,9 @@ Hello! I am a first year PhD student in the Biology department. I'm excited to b
 
 [Homework 9](hw9.html)
 
+[Homework 10](hw10.html)
+
+[Homework 11](hw11.html)  
+[File Cleaning Output](hw11Files/cleaned/)  
+[Batch Processing Output](StatsSummary.csv)  
+

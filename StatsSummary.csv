@@ -1,0 +1,6 @@
+# summary stats for batch processing of regression models
+for columns 3 and 7#timestamp: 2021-05-05 13:39:40
+"ID","file_name","slope","p_val","r2"
+1,"allSotaliaFF.csv",1.72232765442699,0.000228929858042803,0.0574438997688136
+2,"group1FF.csv",6.06074170982502,3.35503944889979e-16,0.361293391314328
+3,"travelingFF.csv",-3.50009298632482,3.31755239536511e-07,0.254996330851643
